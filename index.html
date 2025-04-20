@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tebak Angka</title>
+  <style>
+    body {
+      background-color: #FFF085;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: # FFF6E9;
+      padding: 2rem 3rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    input[type="number"] {
+      padding: 0.5rem;
+      font-size: 1rem;
+      width: 100px;
+      margin-right: 10px;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    p {
+      font-weight: bold;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Game Tebak Angka (1 - 10)</h1>
+
+    {% if message %}
+      <p>{{ message }}</p>
+    {% endif %}
+
+    <form method="POST">
+      <input type="number" name="tebakan" min="1" max="10" required>
+      <button type="submit">Tebak!</button>
+    </form>
+  </div>
+</body>
+</html>
